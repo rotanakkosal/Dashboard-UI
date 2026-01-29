@@ -20,14 +20,24 @@ export const PILL_CHART_DATA: PillData[] = [
   { label: 'A', resources: 52, valid: 96, invalid: 81 },
   { label: 'B', resources: 48, valid: 51, invalid: 25 },
   { label: 'C', resources: 80, valid: 67, invalid: 49 },
-  { label: 'D', resources: 34, valid: 28, invalid: 32 }, // Mocked extra
+  { label: 'D', resources: 34, valid: 28, invalid: 32 },
   { label: 'E', resources: 92, valid: 58, invalid: 20 },
   { label: 'F', resources: 36, valid: 39, invalid: 72 },
-  { label: 'G', resources: 84, valid: 45, invalid: 30 }, // Mocked extra
+  { label: 'G', resources: 84, valid: 45, invalid: 30 },
 ];
 
+export interface PillDisplayItem {
+  id: number;
+  val1: number;
+  val2: number;
+  val3: number | null;
+  color1: string;
+  color2: string;
+  color3?: string;
+}
+
 // 7 columns as per image roughly
-export const PILL_DISPLAY_DATA = [
+export const PILL_DISPLAY_DATA: PillDisplayItem[] = [
     { id: 1, val1: 52, val2: 81, val3: null, color1: 'white', color2: 'orange' },
     { id: 2, val1: 96, val2: 25, val3: null, color1: 'green', color2: 'orange' },
     { id: 3, val1: 48, val2: 51, val3: null, color1: 'green', color2: 'white' },
